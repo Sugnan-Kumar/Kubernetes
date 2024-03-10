@@ -1,0 +1,19 @@
+kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.16.1
+
+kubectl rollout status deployment/nginx-deployment
+
+kubectl edit deployment/nginx-deployment
+
+kubectl describe services/my-service
+
+kubectl describe deployments 
+
+kubectl get endpoints 
+
+kubectl rollout history deployment/nginx-deployment 
+
+kubectl rollout history deployment/nginx-deployment --revision=2
+
+kubectl rollout undo deployment/nginx-deployment
+
+kubectl rollout undo deployment/nginx-deployment --to-revision=2
